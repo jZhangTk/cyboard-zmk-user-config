@@ -14,8 +14,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_wait_time 1000>,
                 <&kp ENTER>,
-                <&macro_wait_time 100>,
                 <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N1>;
 
             label = "PLAYERS1";
