@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     chosen { zmk,matrix-transform = &imprint_function_row_full_bottom_row; };
@@ -14,12 +13,108 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 1000>,
+                <&macro_wait_time 100>,
                 <&kp ENTER>,
                 <&macro_wait_time 15>,
-                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N1>;
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N1 &kp ENTER>;
 
             label = "PLAYERS1";
+        };
+
+        players2: players2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N2 &kp ENTER>;
+
+            label = "PLAYERS2";
+        };
+
+        players3: players3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N3 &kp ENTER>;
+
+            label = "PLAYERS3";
+        };
+
+        players4: players4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N4 &kp ENTER>;
+
+            label = "PLAYERS4";
+        };
+
+        players5: players5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N5 &kp ENTER>;
+
+            label = "PLAYERS5";
+        };
+
+        players6: players6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N6 &kp ENTER>;
+
+            label = "PLAYERS6";
+        };
+
+        players7: players7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N7 &kp ENTER>;
+
+            label = "PLAYERS7";
+        };
+
+        players8: players8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S &kp SPACE &kp N8 &kp ENTER>;
+
+            label = "PLAYERS8";
+        };
+
+        nopickup: nopickup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 15>,
+                <&kp FSLH &kp N &kp O &kp P &kp I &kp C &kp K &kp U &kp P &kp ENTER>;
+
+            label = "NOPICKUP";
         };
     };
 
@@ -33,7 +128,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                   &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSLH
 &kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G                   &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&kp LCTRL  &mo 6   &mo 5   &mo 4   &kp BSPC                                      &kp DEL    &trans     &trans   &mo 7     &kp RCTRL
+&kp LCTRL  &mo 6   &mo 5   &mo 4   &kp BSPC                                      &kp DEL    &mo 3      &kp ESC  &mo 7     &kp RCTRL
                                    &kp ENTER  &kp SPACE  &kp MINUS    &kp EQUAL  &kp SPACE  &kp ENTER
                                    &kp LALT   &kp LGUI   &kp LBKT     &kp RBKT   &kp RGUI   &kp RALT
             >;
@@ -67,27 +162,27 @@
 
         Keyboard_Control_Layer {
             bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans           &trans           &trans           &trans           &trans
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans           &trans           &trans
-&sys_reset   &trans        &trans        &trans        &trans        &trans                  &trans  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
-&bootloader  &trans        &trans        &trans        &trans        &trans                  &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &bootloader
-&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans           &trans           &trans           &trans           &trans
-&trans       &trans        &trans        &trans        &trans                                        &trans           &trans           &trans           &trans           &trans
-                                                       &trans        &trans        &trans    &trans  &trans           &trans
-                                                       &trans        &trans        &trans    &trans  &trans           &trans
+&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset   &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &bootloader
+&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans        &trans        &trans        &trans                                        &trans  &trans  &trans  &trans  &trans
+                                                       &trans        &trans        &trans    &trans  &trans  &trans
+                                                       &trans        &trans        &trans    &trans  &trans  &trans
             >;
         };
 
         Macro_Layer {
             bindings = <
-&trans  &players1  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans
-                                   &trans  &trans  &trans    &trans  &trans  &trans
-                                   &trans  &trans  &trans    &trans  &trans  &trans
+&nopickup  &players1  &players2  &players3  &players4  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &players5  &players6  &players7  &players8  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans                               &trans  &trans  &trans  &trans  &trans
+                                            &trans     &trans  &trans    &trans  &trans  &trans
+                                            &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -144,12 +239,12 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,
         <&zip_xy_scaler 1 50>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
