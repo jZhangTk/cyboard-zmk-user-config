@@ -128,7 +128,7 @@
 &kp TAB    &kp Q   &kp W   &kp E   &kp R      &kp T                   &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSLH
 &kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G                   &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B                   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&kp LCTRL  &mo 6   &mo 5   &mo 4   &kp BSPC                                      &kp DEL    &mo 3      &kp ESC  &mo 7     &kp RCTRL
+&kp LCTRL  &mo 4   &mo 6   &mo 3   &kp BSPC                                      &kp DEL    &mo 7      &kp ESC  &mo 5     &kp RCTRL
                                    &kp ENTER  &kp SPACE  &kp MINUS    &kp EQUAL  &kp SPACE  &kp ENTER
                                    &kp LALT   &kp LGUI   &kp LBKT     &kp RBKT   &kp RGUI   &kp RALT
             >;
@@ -157,32 +157,6 @@
 &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans             &trans    &trans  &trans  &trans
                                 &trans  &kp K_APPLICATION  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        Keyboard_Control_Layer {
-            bindings = <
-&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans  &trans  &trans
-&sys_reset   &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans        &trans        &trans        &trans                                        &trans  &trans  &trans  &trans  &trans
-                                                       &trans        &trans        &trans    &trans  &trans  &trans
-                                                       &trans        &trans        &trans    &trans  &trans  &trans
-            >;
-        };
-
-        Macro_Layer {
-            bindings = <
-&nopickup  &players1  &players2  &players3  &players4  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &players5  &players6  &players7  &players8  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans     &trans     &trans                               &trans  &trans  &trans  &trans  &trans
-                                            &trans     &trans  &trans    &trans  &trans  &trans
-                                            &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -224,17 +198,59 @@
                                                   &trans           &trans        &trans    &trans    &trans         &trans
             >;
         };
+
+        Macro_Layer {
+            bindings = <
+&nopickup  &players1  &players2  &players3  &players4  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &players5  &players6  &players7  &players8  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans                               &trans  &trans  &trans  &trans  &trans
+                                            &trans     &trans  &trans    &trans  &trans  &trans
+                                            &trans     &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Keyboard_Control_Layer {
+            bindings = <
+&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset   &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &bootloader
+&trans       &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans        &trans        &trans        &trans                                        &trans  &trans  &trans  &trans  &trans
+                                                       &trans        &trans        &trans    &trans  &trans  &trans
+                                                       &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Auto_Mouse_Layer {
+            bindings = <
+&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans                               &trans  &trans  &trans  &trans  &trans
+                                      &trans     &trans  &trans    &trans  &trans  &trans
+                                      &trans     &trans  &trans    &trans  &trans  &trans
+            >;
+        };
     };
 };
 
 //right hand trackball configuration
-// &trackball_peripheral_listener {
-// input-processors =
-// this gets it to the default installation orientation,,,
-// <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
-// activate layer 3 within 500ms of the trackball moving
-// <&zip_temp_layer 3 500>;
-// };
+
+&trackball_peripheral_listener {
+    input-processors =
+        <&zip_xy_scaler 2 1>,
+        // this gets it to the default installation orientation,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
+        // activate layer 3 within 500ms of the trackball moving
+        <&zip_temp_layer 8 500>;
+};
+
 //left hand trackball configuration
 
 &trackball_central_listener {
