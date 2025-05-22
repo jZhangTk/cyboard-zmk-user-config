@@ -131,8 +131,8 @@
 &kp CAPS   &kp A   &kp S   &kp D   &kp F      &kp G                   &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C   &kp V      &kp B                   &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
 &kp LCTRL  &mo 4   &mo 6   &mo 3   &kp BSPC                                      &kp DEL   &mo 7      &kp ESC  &mo 5     &kp RCTRL
-                                   &kp SPACE  &kp MINUS  &kp EQUAL    &kp LBKT   &kp RBKT  &kp SPACE
                                    &kp LALT   &kp LGUI   &kp ENTER    &kp ENTER  &kp RGUI  &kp RALT
+                                   &kp SPACE  &kp MINUS  &kp EQUAL    &kp LBKT   &kp RBKT  &kp SPACE
             >;
         };
 
@@ -144,8 +144,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans             &trans    &trans  &trans  &trans
                                 &trans  &kp K_APPLICATION  &trans    &trans  &trans  &trans
+                                &trans  &trans             &trans    &trans  &trans  &trans
             >;
         };
 
@@ -157,8 +157,8 @@
 &trans  &kp G   &kp A   &kp S   &kp D   &kp F                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp B   &kp Z   &kp X   &kp C   &kp V                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans             &trans    &trans  &trans  &trans
                                 &trans  &kp K_APPLICATION  &trans    &trans  &trans  &trans
+                                &trans  &trans             &trans    &trans  &trans  &trans
             >;
         };
 
@@ -170,8 +170,8 @@
 &kp APOS   &kp SEMI  &kp L    &kp K      &kp J     &kp H                 &kp G      &kp F      &kp D     &kp S   &kp A   &kp CAPS
 &kp RSHFT  &kp FSLH  &kp DOT  &kp COMMA  &kp M     &kp N                 &kp B      &kp V      &kp C     &kp X   &kp Z   &kp LSHFT
 &kp RCTRL  &trans    &trans   &trans     &kp DEL                                    &kp BSPC   &trans    &trans  &trans  &kp LCTRL
-                                         &trans    &kp RBKT  &kp LBKT    &kp EQUAL  &kp MINUS  &trans
                                          &kp RALT  &kp RGUI  &trans      &trans     &kp LGUI   &kp LALT
+                                         &trans    &kp RBKT  &kp LBKT    &kp EQUAL  &kp MINUS  &trans
             >;
         };
 
