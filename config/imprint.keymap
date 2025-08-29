@@ -11,6 +11,18 @@
     chosen { zmk,matrix-transform = &imprint_function_row_full_bottom_row; };
 
     macros {
+        players: players {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp ENTER &kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S>,
+                <&macro_wait_time 100>;
+
+            label = "PLAYERS";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
+
         players1: players1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -119,18 +131,6 @@
                 <&kp FSLH &kp N &kp O &kp P &kp I &kp C &kp K &kp U &kp P &kp ENTER>;
 
             label = "NOPICKUP";
-        };
-
-        players: players {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp ENTER &kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S>,
-                <&macro_wait_time 100>;
-
-            label = "PLAYERS";
-            wait-ms = <5>;
-            tap-ms = <5>;
         };
     };
 
