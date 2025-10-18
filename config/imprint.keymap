@@ -18,11 +18,11 @@
                 <&kp ENTER>,
                 <&macro_wait_time 5>,
                 <&kp FSLH &kp P &kp L &kp A &kp Y &kp E &kp R &kp S>,
-                <&macro_wait_time 100>,
-                <&macro_tap_time 100>;
+                <&macro_wait_time 150>,
+                <&macro_tap_time 150>;
 
             label = "PLAYERS";
-            tap-ms = <5>;
+            tap-ms = <10>;
         };
 
         players1: players1 {
@@ -90,7 +90,7 @@
                 <&kp FSLH &kp N &kp O &kp P &kp I &kp C &kp K &kp U &kp P &kp ENTER>;
 
             label = "NOPICKUP";
-            tap-ms = <5>;
+            tap-ms = <10>;
         };
     };
 
@@ -231,13 +231,13 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // this gets it to the default installation orientation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 16>,
         <&zip_scroll_scaler 1 16>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
